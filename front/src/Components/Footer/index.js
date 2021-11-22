@@ -3,7 +3,7 @@ import './style.css';
 
 function Footer() {
   return (
-    <>
+    <div className="footer">
       
 
 
@@ -13,7 +13,7 @@ function Footer() {
 
 
 
-    </>
+    </div>
   );
 }
 

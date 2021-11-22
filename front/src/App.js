@@ -22,7 +22,7 @@ const App=()=> {
     
 <Nav/>
 <Routes>
-        <Route path="/" element={<Home />,<Login/>} />
+        <Route path="/" element={<Home />} />
         <Route exact path="/Courses" element={<Courses />,<Cards/>} />
         <Route exact path="/Pdf" element={<Pdf/>} />
         <Route exact path="/Reference" element={<Reference/>} />
@@ -37,13 +37,11 @@ const App=()=> {
           }}
         />
       </Routes>
-      
-
-<Footer />
-
-
-
+       
     </div>
+   
+  
+
   );
 }
 
