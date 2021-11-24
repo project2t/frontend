@@ -24,11 +24,10 @@ const App=()=> {
 <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/Courses" element={<Courses />,<Cards/>} />
-        <Route exact path="/Pdf" element={<Pdf/>} />
+        <Route exact path="/Pdf" element={<Pdf/>,<Cards/>} />
         <Route exact path="/Reference" element={<Reference/>} />
         <Route exact path="/Login" element={<Login />} />
         <Route exact path="/Registration" element={<Registration />} />
-        <Route exact path="/Registration" element={<Registration/>} />
 
         <Route
           path="*"

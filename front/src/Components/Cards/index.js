@@ -65,7 +65,6 @@ JavaScript Beginner To Expert With JavaScript Programming</Card.Title>
   </Card.Body>
  
   </Card>
-
 </CardGroup>
  
   </>
