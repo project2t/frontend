@@ -22,7 +22,7 @@ const App=()=> {
     
 <Nav/>
 <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />,<Login />} />
         <Route exact path="/Courses" element={<Courses />,<Cards/>} />
         <Route exact path="/Pdf" element={<Pdf/>,<Cards/>} />
         <Route exact path="/Reference" element={<Reference/>} />

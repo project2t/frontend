@@ -3,13 +3,13 @@
 import './style.css';
 
 
-const Regis =()=>{
+const Registration =()=>{
   return (
     <>
       
  
 
-
+<h1>here sign up </h1>
 
 
 
@@ -18,4 +18,4 @@ const Regis =()=>{
   );
 }
 
-export default Regis;
+export default Registration ;
