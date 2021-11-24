@@ -14,7 +14,7 @@ const Login = () => {
   const login = (e) => {
     e.preventDefault();
     axios
-      .post("https://sweetspot-8-back.herokuapp.com/login", {
+      .post("http://localhost:4000/login", {
         email: email,
         password: password,
       })

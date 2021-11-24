@@ -14,7 +14,7 @@ const Register = () => {
   const reg = (e) => {
     e.preventDefault();
     axios
-      .post("https://sweetspot-8-back.herokuapp.com/register", {
+      .post("http://localhost:4000/register", {
         name: usernameReg,
         email: emailReg,
         password: passwordReg,
@@ -112,26 +112,3 @@ export default Register;
  
  
  
- 
- 
- /*import React from "react";
-
-import './style.css';
-
-
-const Registration =()=>{
-  return (
-    <>
-      
- 
-
-<h1>here sign up </h1>
-
-
-
-
-    </>
-  );
-}
-
-export default Registration ;*/
