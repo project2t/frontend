@@ -4,7 +4,7 @@ import './style.css';
 import  MdDeleteForever from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Cards = () => {
+const onCards = () => {
 
   return (
     <>
@@ -124,9 +124,13 @@ JavaScript Beginner To Expert With JavaScript Programming</Card.Title>
   </Card.Body>
  
   </Card>
+
 </CardGroup>
  
   </>
+
+
+
  );
 }
-export default Cards;
+export default onCards;

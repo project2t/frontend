@@ -2,12 +2,13 @@ import React from "react";
 import Home from "./Components/Home"
 import Courses from "./Components/Courses"
 import Nav from "./Components/Nav"
-import Pdf from "./Components/Pdf"
+import Saved from "./Components/Saved"
 import Reference from "./Components/Reference"
 import Registration from "./Components/Registration"
 import Login from "./Components/Login"
 import Footer from "./Components/Footer"
 import Cards from "./Components/Cards";
+import Searchbar from './Components/Searchbar';
 
 import {Routes, Route } from "react-router";
 
@@ -22,9 +23,9 @@ const App=()=> {
     
 <Nav/>
 <Routes>
-        <Route path="/" element={<Home />,<Login />} />
+        <Route path="/" element={<Home />, <Searchbar/>} />
         <Route exact path="/Courses" element={<Courses />,<Cards/>} />
-        <Route exact path="/Pdf" element={<Pdf/>,<Cards/>} />
+        <Route exact path="/Saved" element={<Saved/>,<Cards/>} />
         <Route exact path="/Reference" element={<Reference/>} />
         <Route exact path="/Login" element={<Login />} />
         <Route exact path="/Registration" element={<Registration />} />

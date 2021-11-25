@@ -8,28 +8,22 @@ const Register = () => {
   const [emailReg, setEmailReg] = useState("");
   const [passwordReg, setpasswordReg] = useState("");
   const navigate = useNavigate();
-  //   const [currentUser, setcurrentUser] = useState("");
+//  const [currentUser, setcurrentUser] = useState("");
   const [regResponse, setregResponse] = useState("");
 
   const reg = (e) => {
     e.preventDefault();
+    console.log(usernameReg);
     axios
-      .post("http://localhost:4000/register", {
-        name: usernameReg,
+      .post("http://localhost:5000/user/register", {
+        username: usernameReg,
         email: emailReg,
         password: passwordReg,
       })
       .then((response) => {
-        console.log(response);
-        if (response.data.status == true) {
-          //   setcurrentUser(response.data.name);
-          console.log("registered");
-          navigate("/", { state: {userName:response.data.name} }); //lets assume home is homepage and pass currentUser
-        }
-
-        if (response.data.status == false) {
-          setregResponse(response.data.resp);
-          navigate("/register");
+        console.log(response.data);
+        if(!response.data._message){
+          navigate("/LOGIN");
         }
       });
   };
@@ -40,7 +34,7 @@ const Register = () => {
   return (
     <Container>
       <h1 className="text-center p-5 bg-dark text-white">Register</h1>
-      <form action="/movies/register" method="POST">
+      <form action="/register" method="POST">
         <Form.Group className="mt-5 mx-5" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
 
@@ -106,9 +100,3 @@ export default Register;
  
  
 
-
-
-
- 
- 
- 

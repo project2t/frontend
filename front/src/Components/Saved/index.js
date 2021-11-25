@@ -1,7 +1,7 @@
 import React from "react";
 
 import './style.css';
-const Pdf=()=> {
+const Saved=()=> {
   return (
     <>
       
@@ -10,7 +10,7 @@ const Pdf=()=> {
 
 
 
-      <h1>PDF</h1>
+      <h1>saves books</h1>
 
 
 
@@ -18,4 +18,4 @@ const Pdf=()=> {
   );
 }
 
-export default Pdf;
+export default Saved;

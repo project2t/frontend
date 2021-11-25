@@ -21,16 +21,16 @@ const NavBar = () => {
         <li> <FaAdn/>Coures</li>
       </Link>
 
-      <Link to="/Pdf">
-        <li>pdf</li>
+      <Link to="/saved">
+        <li>Saved</li>
       </Link>
       <Link to="/Reference">
         <li>Reference</li>
       </Link>
-      <Link to="Login">
+      <Link to="/Login">
         <li>Log in</li>
       </Link>
-      <Link to="signup">
+      <Link to="/Registration">
         <li>SignUp</li>
       </Link>
     </ul>
