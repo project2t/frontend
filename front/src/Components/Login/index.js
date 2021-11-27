@@ -22,12 +22,18 @@ const Login = () => {
         console.log(response.data);
         if(response.data){
           navigate("/Courses");
+        
+
         }
+        <Button className="btn btn-dark m-5 px-4 py-2" onClick={login}>
+        Login
+      </Button>
       });
   };
 
 
   const goReg = () => {
+
     navigate("/register");
   };
   return (

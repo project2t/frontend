@@ -1,66 +1,59 @@
-
-/*
-import React, {useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
 import axios from "axios";
+import "./style.css"
+import {useState, useEffect} from "react";
 
-import './style.css';
-import Courses from "../Courses";
+const Saved = () => {
+    const [local, setLocal] = useState([]);
 
-const  Saved = () => {
-const navigate = useNavigate();
-const [Movies, setMovies] = useState([]);
-  const [api, setapi] = useState("http://localhost:5000/get");
+    const getLocalStorage = async () => {
+        const item = await JSON.parse(localStorage.getItem("newUser"));
+        setLocal(item);
+    };
 
-  const getMyAPI = async () => {
-    const response = await axios.get(api);
-    console.log(response.data);
-    setMovies(response.data);
-  };
+    const getData = async () => {
+        if (local) {
+            const item = await axios.get(`https://localhost:4000/allsave${local.email}`);
+            setAccount(item.data);
+        }
 
-  useEffect(() => {
-    getMyAPI();
-  }, []);
+    }; 
+    useEffect(() => {
+        getLocalStorage();
+   
+    }, []);
 
-  const specificCard = (n) => {
-    navigate(`/Card/${n}`, { state: api });
-  };
+    useEffect(() => {
+        getData();
+    }, [local]);
+    const removeFavorite = (id) => {
+        axios.put(`https://localhost:4000/unsave/${local.email}/${id}`);
+        getLocalStorage();
+    };
+        }
+    return (
+        <section className={"Courses-section"}>
+            {email ? (
+                <div className="courses-warrap">
+                    {cards.map((item) => {
+                        return (
+                            <div className="courses" >
+                                <img src={item.img} alt="img" className="courses-imag"/>
+                                <div className="courses-details">
+                                    <h1 className="c_name" >{item.name}</h1>
+    
+                                    <p className="c-desc">{item.dacs}</p>
+                                    <button className="btnadd" id={item._id} onClick={() => removeOrAdd(item._id)}></button>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            ) : ("")}
+        </section>
 
+    );
 
-}
-
-///////////////delete un saved
-const unsaved = (id) => {
-
-  const [local, setLocal] = useState([]);
-
-
-  axios.delete(`http://localhost:5000/delete/ ${local.email}/${id}`);
- 
-};
-
-*/
-/*
-    {/* <Nav /> */ //}
-    /*
-     { Courses.map  ((item, i) => {
-        return (
-          <div>
-            <div >
-              {" "}
-              <h1>{item.ame}</h1>
-              <img src={item.img} alt="courses" />
-            </div>
-            
-            <button  onClick={() => unsaved(item._id)}/>
-          </div>
-
-        
-          )  }
-
-
-         ) }
 export default Saved;
 
 
-*/

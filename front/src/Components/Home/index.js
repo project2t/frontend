@@ -1,13 +1,12 @@
 import React from "react";
 import './style.css';
 
-const Home=()=> {
+const Homepage=()=> {
   return (
     <div className="bu">
       
- 
 
-
+<h1>Explore Programming Courses</h1>
 
 
 
@@ -16,4 +15,4 @@ const Home=()=> {
   );
 }
 
-export default Home;
+export default Homepage;

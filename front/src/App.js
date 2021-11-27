@@ -18,13 +18,13 @@ const App=()=> {
   return (
 
 
-    <div className="homepage"> 
+    <>
+    <div className="homepage">
 
-    
 <Nav/>
 <Routes>
-        <Route path="/" element={<Home />, <Searchbar/>} />
-        <Route exact path="/Courses" element={<Courses />,<Cards/>} />
+        <Route path="/" element={<Home />, <Login />} />
+        <Route exact path="/Courses" element={ <Searchbar/>,<Courses />,<Cards/>} />
         <Route exact path="/Saved" element={<Saved/>,<Cards/>} />
         <Route exact path="/Reference" element={<Reference/>} />
         <Route exact path="/Login" element={<Login />} />
@@ -37,11 +37,12 @@ const App=()=> {
           }}
         />
       </Routes>
-       
-    </div>
+       <Footer/>
+       </div> 
+    </>
    
   
-
+  
   );
 }
 
