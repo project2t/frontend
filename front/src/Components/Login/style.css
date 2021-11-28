@@ -1,20 +1,19 @@
 .loginform{
-background-color: rgb(172, 144, 104);
+background-color: rgb(226, 198, 158);
     display: flex;
     margin-left: 30%;
-    margin-top: 20px;
+    margin-top: 60px;
     justify-content: center;
 width: 40%;
 height: 60%;
-
-
+margin-bottom: 80px;
 text-transform: uppercase;
 letter-spacing: 2.5px;
 font-weight: 200px;
 color: #000;
 border: none;
 border-radius: 80px;
-background: rgb(172, 144, 104);
+background:rgb(155, 131, 101);
 
 transition: all 0.3s ease 0s;
 cursor: pointer;

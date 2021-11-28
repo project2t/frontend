@@ -8,7 +8,7 @@ function Footer() {
 
 
 
-<h1> ™ ® E-Learing Porgramming</h1>
+<h1 className='he'> ®E-Learing Programming</h1>
 
 
 

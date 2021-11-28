@@ -5,6 +5,7 @@
     justify-content: space-around;
     display: block;
     list-style: none;
+   height: 70px;
   }
   .nav ul li {
 
@@ -28,4 +29,13 @@
   .active {
     background-color: rgb(226, 111, 111);
     color: white;
+  }
+
+
+
+  .li1{
+color: antiquewhite;
+font-family: Cavolini;
+font-size: 25px;
+margin-top: 0%;
   }

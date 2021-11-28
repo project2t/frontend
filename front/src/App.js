@@ -8,7 +8,6 @@ import Registration from "./Components/Registration"
 import Login from "./Components/Login"
 import Footer from "./Components/Footer"
 import Cards from "./Components/Cards";
-import Searchbar from './Components/Searchbar';
 
 import {Routes, Route } from "react-router";
 
@@ -24,7 +23,7 @@ const App=()=> {
 <Nav/>
 <Routes>
         <Route path="/" element={<Home />, <Login />} />
-        <Route exact path="/Courses" element={ <Searchbar/>,<Courses />,<Cards/>} />
+        <Route exact path="/Courses" element={ <Courses />,<Cards/>} />
         <Route exact path="/Saved" element={<Saved/>,<Cards/>} />
         <Route exact path="/Reference" element={<Reference/>} />
         <Route exact path="/Login" element={<Login />} />

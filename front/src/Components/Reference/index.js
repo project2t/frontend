@@ -6,9 +6,7 @@ const Refer=()=> {
     <>
       
 
-      <h1>Reference</h1>
-
-
+ 
 
 
 

@@ -8,7 +8,7 @@ const Register = () => {
   const [emailReg, setEmailReg] = useState("");
   const [passwordReg, setpasswordReg] = useState("");
   const navigate = useNavigate();
-//  const [currentUser, setcurrentUser] = useState("");
+
   const [regResponse, setregResponse] = useState("");
 
   const reg = (e) => {
@@ -32,8 +32,9 @@ const Register = () => {
     navigate("/login");
   };
   return (
+    <div className="signup">
     <Container>
-      <h1 className="text-center p-5 bg-dark text-white">Register</h1>
+      <h1 className="text-center p-5 bg-dark text-white">Sign Up</h1>
       <form action="/register" method="POST">
         <Form.Group className="mt-5 mx-5" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
@@ -92,6 +93,7 @@ const Register = () => {
         </Button>
       </form>
     </Container>
+    </div>
   );
 };
 
